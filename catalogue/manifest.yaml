@@ -23,6 +23,9 @@ spec:
       containers:
       - name: catalogue
         image: chinna9967/catalogue:1.0.0
+        envFrom:
+          - configMapRef:
+              name: catalogue
 ---
 apiVersion: v1
 kind: Service
@@ -38,3 +41,11 @@ spec:
     protocol: TCP
     port: 8080 # this port belongs to service
     targetPort: 8080 # this port belongs to container
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalogue
+data:
+  MONGO: "true"
+  MONGO_URL: "mongodb://mongodb:27017/catalogue"  # protocol//service-name:service-port/schema
