@@ -55,5 +55,3 @@ data:
   USER_HOST: "user"
   USER_PORT: "8080"
   AMPQ_HOST: "rabbitmq"
-  AMPQ_USER: "roboshop"
-  AMPQ_PASS: "roboshop123"
