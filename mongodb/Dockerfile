@@ -1,2 +1,2 @@
-FROM mongo:5-focal
+FROM mongo:5
 COPY *.js /docker-entrypoint-initdb.d/
