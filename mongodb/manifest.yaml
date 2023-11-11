@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: mongodb
   namespace: roboshop
-  labels:
+  labels: # these labels belong to deployment
     app: mongodb
     tier: db
     project: roboshop
 spec:
   replicas: 1
   selector:
-    matchLabels:
+    matchLabels: # these labels should match with pod
       app: mongodb
       tier: db
       project: roboshop
-  template:
+  template: # this is the pod definition
     metadata:
       labels:
         app: mongodb
