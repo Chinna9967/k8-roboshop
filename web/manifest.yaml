@@ -144,7 +144,7 @@ spec:
             path: nginx.conf
       containers:
       - name: catalogue
-        image: joindevops/web:1.0.0
+        image: chinna9967/web:1.0.0
         volumeMounts:
         - name: nginx-conf # name of the volume you created above
           mountPath: /etc/nginx/nginx.conf
@@ -166,4 +166,4 @@ spec:
   - name: web-port
     protocol: TCP
     port: 80 # this port belongs to service
-    targetPort: 80 # this port belongs to container
+    targetPort: http-web-svc # this port belongs to container
