@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user
+  name: cart
   namespace: roboshop
   labels:
-    app: user
+    app: cart
     tier: app
     project: roboshop
 spec:
@@ -39,7 +39,7 @@ spec:
     tier: app
     project: roboshop
   ports:
-  - name: cart-port
+  - name: mongodb-port
     protocol: TCP
     port: 8080 # this port belongs to service
     targetPort: 8080 # this port belongs to container
